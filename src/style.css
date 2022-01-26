@@ -4,18 +4,17 @@
   --fs-500: 1.375rem;
   --fs-600: 1.875rem;
   --fs-700: 2rem;
-
-  --ff-body: "Roboto", sans-serif;
-  --ff-heading: "Playfair Display", serif;
+  --ff-body: cursive;
+  --ff-heading: cursive;
 
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: #1aafff;
+  --clr-primary-300: #00a6ff;
+  --clr-primary-400: #0095e6;
+  --clr-primary-500: #0085cc;
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -139,10 +138,8 @@ strong {
 
 section,
 .section {
-  padding: min(10vh, 10em) 0;
+  padding: min(7vh, 7em) 0;
 }
-
-
 
 /* //////////////////////
   Utility Classes
@@ -164,6 +161,11 @@ section,
 
 .container--narrow {
   max-width: 65rem;
+}
+
+.logo {
+  width: 70px;
+  margin-top: -20px;
 }
 
 .flex-group {
@@ -190,7 +192,6 @@ section,
 .section-title {
   font-size: var(--fs-600);
 }
-
 
 /* //////////////////////
   Header
@@ -258,7 +259,7 @@ section,
 }
 
 .featured-articles {
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-100);
 }
 
 .articles__list {
@@ -270,15 +271,15 @@ section,
   Individual article page
   /////////////////////// */
 
-  .main-article {
-    margin-bottom: 3rem;
-  }
+.main-article {
+  margin-bottom: 3rem;
+}
 
-  .main-article__figure figcaption {
-    margin: 1rem 0;
-    font-size: var(--fs-300);
-    opacity: .9;
-  }
+.main-article__figure figcaption {
+  margin: 1rem 0;
+  font-size: var(--fs-300);
+  opacity: 0.9;
+}
 
 /* //////////////////////
   Article snippets
@@ -330,7 +331,7 @@ section,
 .snippet__title a:hover,
 .snippet__title a:focus {
   color: var(--clr-primary-500);
-} 
+}
 
 @media (min-width: 45em) {
   .snippet {
@@ -366,11 +367,13 @@ section,
   color: var(--clr-neutral-100);
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-primary-400);
+  width: 250px;
+  text-align: center;
 }
 .btn--primary:hover,
 .btn--primary:focus {
   background: var(--clr-primary-500);
-  border-color: var(--clr-primary-500); 
+  border-color: var(--clr-primary-500);
 }
 
 .btn--neutral {
@@ -378,6 +381,7 @@ section,
   color: var(--clr-neutral-900);
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-neutral-900);
+  width: 250px;
 }
 
 .btn--neutral:hover,

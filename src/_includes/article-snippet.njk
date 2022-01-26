@@ -1,3 +1,5 @@
+
+
 <li>
       <article class="snippet">
         <img class="snippet__image"src="{{post.data.image}}" alt="">
@@ -5,8 +7,7 @@
         <p class="spippet__meta">
           by <span>{{ post.data.author }} </span> on <span>{{post.data.date | postDate }}</span>
         </p>
-        <p class="snippet__body">
-          {{post.data.description}}
+        <p class="snippet__body"> {{ post.data.description}}
         </p>
         </li>
         <a href="{{ post.url }}" class="btn btn--primary">Read More</a>  
