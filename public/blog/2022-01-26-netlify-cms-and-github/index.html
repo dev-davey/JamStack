@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netlify CMS and GitHub</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    </head>
+    <body>
+        <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img class="logo" src="../assets/logo.png" alt="" />
+      </div>
+      <nav>
+        <ul role="list" class="nav-list flex-group">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+        <main>
+        
+ <article class="main-article">
+    <div class="container container--narrow flow">
+        <h1 class="article-title">
+            Netlify CMS and GitHub
+        </h1>
+        <figure class="main-article__figure">
+            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="">
+                <figcaption>
+                    
+                </figcaption>
+            </figure>
+            <p><p>The last couple of days I have built a JamStack application for the first time. This JamStack application is actually this blog! This blog is built with Nunjucks templating, eleventy.js and integrated with netlify through github to serve the files and give me access to netlify's cms. This whole process has been a really cool experience and given me a ton of concepts to think about and dive deeper into. I am a front end engineer who is used to building websites and applications either from scratch, or using a JavaScript framework like react. I have never coded out a website and actually connected it to a CMS.</p>
+<p>My previous notions of a CMS was WordPress, a product I thought there main use was for people to make websites without having the coding knowledge. I was aware of people custom coding templates and connecting them via PHP but I have never done that myself. I am going to keep working on this JamStack project as well as others and keep documenting it on this blog.</p>
+<p>As a side note I really want to dive into the netlify docs and see what else you can do with their API's because these seems like a really powerful platform!</p>
+</p>
+        </div>
+    </article>
+        <main/>
+        <footer class="site-footer">
+           
+            <p> <p id="date"></p> Dev-Davey. All rights reserved.</p>
+            <p>Visit <a target="_blank" href="https://DevDavey.com">DevDavey.com</a> for projects!</p>
+            <script>document.getElementById("date").innerHTML = '©' + new Date().getFullYear();</script>
+            
+          </footer>
+          
+        <script src="./date.js"></script>
+
+
+        <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<script src="script.js"></script>
+    </body>
+</html>
